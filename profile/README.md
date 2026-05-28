@@ -90,7 +90,8 @@
 | Repository    | Repository URL                                                  | Memo           |
 | ------------- | --------------------------------------------------------------- | -------------- |
 | `game-list` | [GitHub](https://github.com/lvncers-knowledge-base/game-list) | ゲーム一覧 |
-| `game-making` | [GitHub](https://github.com/lvncers-knowledge-base/game-making) | ゲーム制作全般 |
+| `game-knowhow` | [GitHub](https://github.com/lvncers-knowledge-base/game-knowhow) | ゲーム制作ノウハウ |
+| `game-making` | [GitHub](https://github.com/lvncers-knowledge-base/game-making) | ゲーム制作全般（技術面） |
 | `godot`       | [GitHub](https://github.com/lvncers-knowledge-base/godot)       | Godot          |
 
 ## 数学・科学・学習
