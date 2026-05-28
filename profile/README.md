@@ -89,6 +89,7 @@
 
 | Repository    | Repository URL                                                  | Memo           |
 | ------------- | --------------------------------------------------------------- | -------------- |
+| `game-list` | [GitHub](https://github.com/lvncers-knowledge-base/game-list) | ゲーム一覧 |
 | `game-making` | [GitHub](https://github.com/lvncers-knowledge-base/game-making) | ゲーム制作全般 |
 | `godot`       | [GitHub](https://github.com/lvncers-knowledge-base/godot)       | Godot          |
 
