@@ -40,7 +40,6 @@
 | `aws`        | [GitHub](https://github.com/lvncers-knowledge-base/aws)        | AWS                    |
 | `docker`     | [GitHub](https://github.com/lvncers-knowledge-base/docker)     | Docker                 |
 | `iac`        | [GitHub](https://github.com/lvncers-knowledge-base/iac)        | Infrastructure as Code |
-| `k8s`        | [GitHub](https://github.com/lvncers-knowledge-base/k8s)        | Kubernetes関連         |
 | `Kubernetes` | [GitHub](https://github.com/lvncers-knowledge-base/Kubernetes) | Kubernetes関連         |
 | `monitoring` | [GitHub](https://github.com/lvncers-knowledge-base/monitoring) | 監視                   |
 | `network`    | [GitHub](https://github.com/lvncers-knowledge-base/network)    | ネットワーク           |
