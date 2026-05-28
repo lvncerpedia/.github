@@ -97,9 +97,9 @@ Python側では `python-dotenv` を使って読み込む。
 #### 実行方法
 
 ```bash
-cd ~/knowledge-vault/scripts
-pip install requests python-dotenv
-python sync_repos.py
+cd ~/knowledge-vault/repos/.github/scripts
+uv sync
+uv run sync_repos.py
 ```
 
 これで:
