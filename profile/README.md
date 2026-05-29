@@ -76,11 +76,12 @@
 
 | Repository        | Repository URL                                                      | Memo                     |
 | ----------------- | ------------------------------------------------------------------- | ------------------------ |
+| `figma`          | [GitHub](https://github.com/lvncers-knowledge-base/figma)          | Figma                 |
+| `design`          | [GitHub](https://github.com/lvncers-knowledge-base/design)          | デザイン                 |
+| `fonts`           | [GitHub](https://github.com/lvncers-knowledge-base/fonts)           | フォント                 |
 | `audio`           | [GitHub](https://github.com/lvncers-knowledge-base/audio)           | オーディオ機器・音響     |
 | `custom-built-PC` | [GitHub](https://github.com/lvncers-knowledge-base/custom-built-PC) | 自作PC                   |
 | `custom-keyboard` | [GitHub](https://github.com/lvncers-knowledge-base/custom-keyboard) | 自作キーボード           |
-| `design`          | [GitHub](https://github.com/lvncers-knowledge-base/design)          | デザイン                 |
-| `fonts`           | [GitHub](https://github.com/lvncers-knowledge-base/fonts)           | フォント                 |
 | `gadget`          | [GitHub](https://github.com/lvncers-knowledge-base/gadget)          | ガジェット               |
 | `presentation`    | [GitHub](https://github.com/lvncers-knowledge-base/presentation)    | プレゼンテーション       |
 | `unixporn`        | [GitHub](https://github.com/lvncers-knowledge-base/unixporn)        | デスクトップカスタマイズ |
