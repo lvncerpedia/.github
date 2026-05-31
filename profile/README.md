@@ -4,6 +4,14 @@ lvncerpeida is lvncers knowledge base.
 
 <img width=200 src="../images/l.png" >
 
+## License
+
+このOrganization配下の全リポジトリは、特に明記されていない限り [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) のもとで公開されています。
+
+- 個人利用・学習目的での使用・改変・再配布は自由です
+- 商用利用は禁止です
+- 利用の際はこのリポジトリへのクレジット表記をお願いします
+
 # Repository Categories
 
 ## AI・LLM・Agent
@@ -58,7 +66,7 @@ lvncerpeida is lvncers knowledge base.
 | `database`                     | [GitHub](https://github.com/lvncers-knowledge-base/database)                     | データベース               |
 | `development-principles`       | [GitHub](https://github.com/lvncers-knowledge-base/development-principles)       | 開発原則                   |
 | `mermaid`                      | [GitHub](https://github.com/lvncers-knowledge-base/mermaid)                      | Mermaid図                  |
-| `os`                           | [GitHub](https://github.com/lvncers-knowledge-base/os)                      | オペレーティングシステム   |
+| `os`                           | [GitHub](https://github.com/lvncers-knowledge-base/os)                           | オペレーティングシステム   |
 | `project-management`           | [GitHub](https://github.com/lvncers-knowledge-base/project-management)           | プロジェクト管理           |
 | `software-test`                | [GitHub](https://github.com/lvncers-knowledge-base/software-test)                | ソフトウェアテスト         |
 | `sql`                          | [GitHub](https://github.com/lvncers-knowledge-base/sql)                          | SQL                        |
@@ -79,7 +87,7 @@ lvncerpeida is lvncers knowledge base.
 
 | Repository        | Repository URL                                                      | Memo                     |
 | ----------------- | ------------------------------------------------------------------- | ------------------------ |
-| `figma`          | [GitHub](https://github.com/lvncers-knowledge-base/figma)          | Figma                 |
+| `figma`           | [GitHub](https://github.com/lvncers-knowledge-base/figma)           | Figma                    |
 | `design`          | [GitHub](https://github.com/lvncers-knowledge-base/design)          | デザイン                 |
 | `fonts`           | [GitHub](https://github.com/lvncers-knowledge-base/fonts)           | フォント                 |
 | `audio`           | [GitHub](https://github.com/lvncers-knowledge-base/audio)           | オーディオ機器・音響     |
@@ -91,12 +99,12 @@ lvncerpeida is lvncers knowledge base.
 
 ## ゲーム制作
 
-| Repository    | Repository URL                                                  | Memo           |
-| ------------- | --------------------------------------------------------------- | -------------- |
-| `game-list` | [GitHub](https://github.com/lvncers-knowledge-base/game-list) | ゲーム一覧 |
-| `game-knowhow` | [GitHub](https://github.com/lvncers-knowledge-base/game-knowhow) | ゲーム制作ノウハウ |
-| `game-making` | [GitHub](https://github.com/lvncers-knowledge-base/game-making) | ゲーム制作全般（技術面） |
-| `godot`       | [GitHub](https://github.com/lvncers-knowledge-base/godot)       | Godot          |
+| Repository     | Repository URL                                                   | Memo                     |
+| -------------- | ---------------------------------------------------------------- | ------------------------ |
+| `game-list`    | [GitHub](https://github.com/lvncers-knowledge-base/game-list)    | ゲーム一覧               |
+| `game-knowhow` | [GitHub](https://github.com/lvncers-knowledge-base/game-knowhow) | ゲーム制作ノウハウ       |
+| `game-making`  | [GitHub](https://github.com/lvncers-knowledge-base/game-making)  | ゲーム制作全般（技術面） |
+| `godot`        | [GitHub](https://github.com/lvncers-knowledge-base/godot)        | Godot                    |
 
 ## 数学・科学・学習
 
