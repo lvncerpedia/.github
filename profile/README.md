@@ -56,6 +56,7 @@
 | `database`                     | [GitHub](https://github.com/lvncers-knowledge-base/database)                     | データベース               |
 | `development-principles`       | [GitHub](https://github.com/lvncers-knowledge-base/development-principles)       | 開発原則                   |
 | `mermaid`                      | [GitHub](https://github.com/lvncers-knowledge-base/mermaid)                      | Mermaid図                  |
+| `os`                           | [GitHub](https://github.com/lvncers-knowledge-base/mermaid)                      | オペレーティングシステム   |
 | `project-management`           | [GitHub](https://github.com/lvncers-knowledge-base/project-management)           | プロジェクト管理           |
 | `software-test`                | [GitHub](https://github.com/lvncers-knowledge-base/software-test)                | ソフトウェアテスト         |
 | `sql`                          | [GitHub](https://github.com/lvncers-knowledge-base/sql)                          | SQL                        |
