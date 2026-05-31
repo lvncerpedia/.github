@@ -2,7 +2,7 @@
 
 lvncerpeida is lvncers knowledge base.
 
-<img width=200 src="../images/lvncer-knowledge-base-readme-img.jpeg" >
+<img width=200 src="../images/l.png" >
 
 # Repository Categories
 
