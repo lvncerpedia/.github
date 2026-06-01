@@ -63,14 +63,15 @@ lvncerpeida is lvncers knowledge base.
 | `algorithm-and-data-structure` | [GitHub](https://github.com/lvncers-knowledge-base/algorithm-and-data-structure) | アルゴリズム・データ構造   |
 | `architecture`                 | [GitHub](https://github.com/lvncers-knowledge-base/architecture)                 | ソフトウェアアーキテクチャ |
 | `computer-science`             | [GitHub](https://github.com/lvncers-knowledge-base/computer-science)             | コンピュータサイエンス     |
-| `database`                     | [GitHub](https://github.com/lvncers-knowledge-base/database)                     | データベース               |
 | `development-principles`       | [GitHub](https://github.com/lvncers-knowledge-base/development-principles)       | 開発原則                   |
 | `mermaid`                      | [GitHub](https://github.com/lvncers-knowledge-base/mermaid)                      | Mermaid図                  |
 | `os`                           | [GitHub](https://github.com/lvncers-knowledge-base/os)                           | オペレーティングシステム   |
 | `project-management`           | [GitHub](https://github.com/lvncers-knowledge-base/project-management)           | プロジェクト管理           |
 | `software-test`                | [GitHub](https://github.com/lvncers-knowledge-base/software-test)                | ソフトウェアテスト         |
-| `sql`                          | [GitHub](https://github.com/lvncers-knowledge-base/sql)                          | SQL                        |
 | `uml`                          | [GitHub](https://github.com/lvncers-knowledge-base/uml)                          | UML                        |
+| `database`                     | [GitHub](https://github.com/lvncers-knowledge-base/database)                     | データベース               |
+| `orm`                          | [GitHub](https://github.com/lvncers-knowledge-base/orm)                          | ORM               |
+| `sql`                          | [GitHub](https://github.com/lvncers-knowledge-base/sql)                          | SQL                        |
 
 ## 開発環境・エディタ・作業効率
 
