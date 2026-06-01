@@ -90,6 +90,7 @@ lvncerpeida is lvncers knowledge base.
 | ----------------- | -------------------------------------------------------- | ------------------------ |
 | `figma`           | [GitHub](https://github.com/lvncerpedia/figma)           | Figma                    |
 | `design`          | [GitHub](https://github.com/lvncerpedia/design)          | デザイン                 |
+| `modeling`        | [GitHub](https://github.com/lvncerpedia/modeling)        | 3D モデリング            |
 | `fonts`           | [GitHub](https://github.com/lvncerpedia/fonts)           | フォント                 |
 | `audio`           | [GitHub](https://github.com/lvncerpedia/audio)           | オーディオ機器・音響     |
 | `custom-built-PC` | [GitHub](https://github.com/lvncerpedia/custom-built-PC) | 自作PC                   |
