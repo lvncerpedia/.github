@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-ORG_NAME = "lvncers-knowledge-base"
+ORG_NAME = "lvncerpedia"
 BASE_DIR = Path.home() / "knowledge-vault" / "repos"
 TOKEN = os.getenv("GITHUB_TOKEN")
 
