@@ -31,14 +31,15 @@ lvncerpeida is lvncers knowledge base.
 
 | Repository         | Repository URL                                            | Memo                   |
 | ------------------ | --------------------------------------------------------- | ---------------------- |
-| `go`               | [GitHub](https://github.com/lvncerpedia/go)               | Go                     |
-| `java`             | [GitHub](https://github.com/lvncerpedia/java)             | Java                   |
-| `js-libraries`     | [GitHub](https://github.com/lvncerpedia/js-libraries)     | JavaScriptライブラリ   |
 | `programming`      | [GitHub](https://github.com/lvncerpedia/programming)      | プログラミング全般     |
 | `programming-lang` | [GitHub](https://github.com/lvncerpedia/programming-lang) | プログラミング言語全般 |
-| `rails`            | [GitHub](https://github.com/lvncerpedia/rails)            | Rails                  |
+| `java`             | [GitHub](https://github.com/lvncerpedia/java)             | Java                   |
+| `js-libraries`     | [GitHub](https://github.com/lvncerpedia/js-libraries)     | JavaScriptライブラリ   |
 | `react`            | [GitHub](https://github.com/lvncerpedia/react)            | React                  |
 | `react-native`     | [GitHub](https://github.com/lvncerpedia/react-native)     | React Native           |
+| `nextjs`           | [GitHub](https://github.com/lvncerpedia/nextjs)           | Next.js           |
+| `go`               | [GitHub](https://github.com/lvncerpedia/go)               | Go                     |
+| `rails`            | [GitHub](https://github.com/lvncerpedia/rails)            | Rails                  |
 | `rust`             | [GitHub](https://github.com/lvncerpedia/rust)             | Rust                   |
 | `tailwindcss`      | [GitHub](https://github.com/lvncerpedia/tailwindcss)      | Tailwind CSS           |
 | `web-saas`         | [GitHub](https://github.com/lvncerpedia/web-saas)         | Web/SaaS関連           |
