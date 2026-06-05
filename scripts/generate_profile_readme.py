@@ -15,6 +15,7 @@ REPOS_YAML = PROFILE_DIR / "repos.yaml"
 README = PROFILE_DIR / "README.md"
 
 UNCATEGORIZED = "未分類"
+META_GROUP = "管理"
 MARKER_START = "<!-- REPOS:START -->"
 MARKER_END = "<!-- REPOS:END -->"
 
@@ -27,9 +28,15 @@ def load_config():
     return yaml.load(REPOS_YAML.read_text(encoding="utf-8"))
 
 
+def iter_categories(config):
+    for group in config["groups"]:
+        for category in group["categories"]:
+            yield category
+
+
 def listed_names(config):
     names = set()
-    for category in config["categories"]:
+    for category in iter_categories(config):
         for repo in category["repos"] or []:
             names.add(str(repo["name"]).lower())
     return names
@@ -55,13 +62,25 @@ def fetch_org_repos(org, token):
 
 
 def uncategorized_category(config):
-    for category in config["categories"]:
+    for category in iter_categories(config):
         if category["name"] == UNCATEGORIZED:
             return category
+
+    meta_group = None
+    for group in config["groups"]:
+        if group["name"] == META_GROUP:
+            meta_group = group
+            break
+    if meta_group is None:
+        meta_group = CommentedMap()
+        meta_group["name"] = META_GROUP
+        meta_group["categories"] = []
+        config["groups"].append(meta_group)
+
     category = CommentedMap()
     category["name"] = UNCATEGORIZED
     category["repos"] = []
-    config["categories"].append(category)
+    meta_group["categories"].append(category)
     return category
 
 
@@ -84,7 +103,7 @@ def sync_with_org(config, org_repos):
         print(f"Added {len(new_repos)} new repo(s) to {UNCATEGORIZED}: {', '.join(new_repos)}")
 
     org_lower = {name.lower() for name in org_repos}
-    for category in config["categories"]:
+    for category in iter_categories(config):
         for repo in category["repos"] or []:
             if str(repo["name"]).lower() not in org_lower:
                 print(f"WARNING: '{repo['name']}' is listed but not found in org (not removed)")
@@ -92,24 +111,39 @@ def sync_with_org(config, org_repos):
     return new_repos
 
 
+def render_category(category, org):
+    repos = category["repos"] or []
+    if not repos:
+        return None
+    lines = [
+        f"### {category['name']}",
+        "",
+        "| Repository | Repository URL | Memo |",
+        "| --- | --- | --- |",
+    ]
+    for repo in repos:
+        name = repo["name"]
+        memo = repo.get("memo") or ""
+        url = f"https://github.com/{org}/{name}"
+        lines.append(f"| `{name}` | [GitHub]({url}) | {memo} |")
+    return "\n".join(lines)
+
+
 def render_tables(config, org):
     blocks = []
-    for category in config["categories"]:
-        repos = category["repos"] or []
-        if not repos:
-            continue
-        lines = [
-            f"## {category['name']}",
-            "",
-            "| Repository | Repository URL | Memo |",
-            "| --- | --- | --- |",
+    for group in config["groups"]:
+        category_blocks = [
+            block
+            for category in group["categories"]
+            if (block := render_category(category, org)) is not None
         ]
-        for repo in repos:
-            name = repo["name"]
-            memo = repo.get("memo") or ""
-            url = f"https://github.com/{org}/{name}"
-            lines.append(f"| `{name}` | [GitHub]({url}) | {memo} |")
-        blocks.append("\n".join(lines))
+        if not category_blocks:
+            continue
+        header = f"## {group['name']}"
+        description = group.get("description")
+        if description:
+            header = f"{header}\n\n{description}"
+        blocks.append("\n\n".join([header, *category_blocks]))
     return "\n\n".join(blocks)
 
 
