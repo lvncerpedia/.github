@@ -1,0 +1,44 @@
+name: Update profile README
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  push:
+    paths:
+      - "profile/repos.yaml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Generate profile README
+        working-directory: scripts
+        env:
+          GITHUB_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+        run: |
+          uv sync
+          uv run generate_profile_readme.py
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/update-profile-readme
+          title: "chore: update profile README"
+          commit-message: "chore: update profile README"
+          body: |
+            Org の repo 一覧と `profile/repos.yaml` を同期しました。
+
+            - 新しい repo は `未分類` カテゴリに追加されています
+            - 正しいカテゴリへ移動し、`memo` を記入してください
+          add-paths: |
+            profile/repos.yaml
+            profile/README.md
