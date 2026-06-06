@@ -24,25 +24,41 @@ jobs:
       - uses: astral-sh/setup-uv@v5
 
       - name: Generate profile README
+        id: generate
         working-directory: scripts
         env:
           GITHUB_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
         run: |
           uv sync
           uv run generate_profile_readme.py
+          cd ..
+          if git diff --quiet profile/repos.yaml profile/README.md; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Create pull request
+        if: steps.generate.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.REPO_WRITE_TOKEN }}
-          branch: chore/update-profile-readme
-          title: "chore: update profile README"
-          commit-message: "chore: update profile README"
+          branch: chore/sync-org-repos
+          title: "chore: sync org repos to profile"
+          commit-message: "chore: sync org repos to profile"
           body: |
-            Org の repo 一覧と `profile/repos.yaml` を同期しました。
+            ## Org リポジトリの同期
 
-            - 新しい repo は `管理` → `未分類` に追加されています
-            - 正しいカテゴリへ移動し、`memo` を記入してください
+            GitHub API で検出した新しいリポジトリを `profile/repos.yaml` の `未分類` に追加しました。
+
+            ### 対応してください
+
+            - [ ] `未分類` の各 repo を正しいカテゴリへ移動する
+            - [ ] `memo` フィールドに説明を記入する
+            - [ ] 問題なければこの PR をマージする
+
+            ---
+            _このPRは GitHub Actions により自動作成されました。_
           add-paths: |
             profile/repos.yaml
             profile/README.md
