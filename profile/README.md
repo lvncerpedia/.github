@@ -184,7 +184,7 @@ AI・データ。
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
-| `english` | [GitHub](https://github.com/lvncerpedia/english) |  |
+| `english` | [GitHub](https://github.com/lvncerpedia/english) | 英語 |
 
 ## 教養・文化
 

@@ -1,36 +1,49 @@
 org: lvncerpedia
 
 groups:
-  - name: "コア — ソフトウェア工学"
-    description: "仕事の技術の土台。基礎→設計→実装→運用のレイヤー。"
+  - name: "理学"
+    description: "数学・計算の原理。"
     categories:
-      - name: "基礎"
+      - flat: true
         repos:
           - {name: math, memo: "数学"}
-          - {name: computer-science, memo: "コンピュータサイエンス"}
           - {name: algorithm-and-data-structure, memo: "アルゴリズム・データ構造"}
+
+  - name: "コンピュータ科学"
+    description: "計算機・OSの原理。"
+    categories:
+      - flat: true
+        repos:
+          - {name: computer-science, memo: "コンピュータサイエンス"}
           - {name: os, memo: "オペレーティングシステム"}
+
+  - name: "ソフトウェア工学"
+    description: "システム開発（設計・実装・品質・運用）。"
+    categories:
       - name: "設計"
         repos:
           - {name: architecture, memo: "ソフトウェアアーキテクチャ"}
           - {name: development-principles, memo: "開発原則"}
           - {name: uml, memo: "UML"}
-          - {name: software-test, memo: "ソフトウェアテスト"}
           - {name: mermaid, memo: "Mermaid図"}
       - name: "実装"
         repos:
           - {name: programming, memo: "プログラミング全般"}
           - {name: programming-lang, memo: "プログラミング言語全般"}
-          - {name: java, memo: "Java"}
           - {name: go, memo: "Go"}
           - {name: rust, memo: "Rust"}
-          - {name: rails, memo: "Rails"}
+          - {name: java, memo: "Java"}
           - {name: react, memo: "React"}
           - {name: react-native, memo: "React Native"}
           - {name: nextjs, memo: "Next.js"}
+          - {name: rails, memo: "Rails"}
+          - {name: web-saas, memo: "Web/SaaS関連"}
           - {name: js-libraries, memo: "JavaScriptライブラリ"}
           - {name: tailwindcss, memo: "Tailwind CSS"}
-          - {name: web-saas, memo: "Web/SaaS関連"}
+      - name: "品質"
+        repos:
+          - {name: software-test, memo: "ソフトウェアテスト"}
+          - {name: debug, memo: "デバッグ"}
       - name: "運用"
         repos:
           - {name: aws, memo: "AWS"}
@@ -39,12 +52,13 @@ groups:
           - {name: iac, memo: "Infrastructure as Code"}
           - {name: network, memo: "ネットワーク"}
           - {name: monitoring, memo: "監視"}
+          - {name: git, memo: "Git"}
           - {name: workflows, memo: "ワークフロー自動化"}
 
-  - name: "応用 — 専門領域"
-    description: "特定ドメインへの応用（AI・データ・ゲーム）。"
+  - name: "情報・知能"
+    description: "AI・データ。"
     categories:
-      - name: "AI・知能"
+      - name: "AI・LLM"
         repos:
           - {name: llm, memo: "LLMの基礎・仕組み"}
           - {name: ml, memo: "機械学習"}
@@ -59,62 +73,78 @@ groups:
           - {name: database, memo: "データベース"}
           - {name: sql, memo: "SQL"}
           - {name: orm, memo: "ORM"}
-      - name: "ゲーム制作"
-        repos:
-          - {name: game-making, memo: "ゲーム制作全般（技術面）"}
-          - {name: game-knowhow, memo: "ゲーム制作ノウハウ"}
-          - {name: godot, memo: "Godot"}
 
-  - name: "方法論 — ツールと生産性"
-    description: "全領域を横断するやり方・環境。"
+  - name: "デザイン"
+    description: "見た目・表現・メディア。"
     categories:
-      - name: "開発環境"
-        repos:
-          - {name: setup, memo: "環境構築・セットアップ"}
-          - {name: nvim, memo: "Neovim"}
-          - {name: obsidian, memo: "Obsidian"}
-          - {name: shortcut, memo: "ショートカット"}
-          - {name: unixporn, memo: "デスクトップカスタマイズ"}
-      - name: "ワークフロー"
-        repos:
-          - {name: git, memo: "Git"}
-          - {name: debug, memo: "デバッグ"}
-          - {name: toolchain, memo: "開発ツールチェーン"}
-          - {name: project-management, memo: "プロジェクト管理"}
-
-  - name: "教養 — インプットと趣味"
-    description: "仕事外の知的好奇心・情報収集。"
-    categories:
-      - name: "情報・時事"
-        repos:
-          - {name: news, memo: "ニュースメモ"}
-          - {name: news-source, memo: "ニュース情報源"}
-          - {name: events, memo: "イベント"}
-      - name: "探究・学習"
-        repos:
-          - {name: universe, memo: "宇宙"}
-          - {name: military, memo: "軍事・装備"}
-          - {name: exams, memo: "試験・学習メモ"}
-      - name: "クリエイティブ・趣味"
+      - flat: true
         repos:
           - {name: design, memo: "デザイン"}
           - {name: figma, memo: "Figma"}
           - {name: fonts, memo: "フォント"}
-          - {name: modeling, memo: "3D モデリング"}
           - {name: sound, memo: "サウンド"}
           - {name: audio, memo: "オーディオ機器・音響"}
           - {name: presentation, memo: "プレゼンテーション"}
+          - {name: modeling, memo: "3D モデリング"}
+
+  - name: "人文・言語"
+    description: "言語を学ぶ。"
+    categories:
+      - flat: true
+        repos:
+          - {name: english, memo: "英語"}
+
+  - name: "教養・文化"
+    description: "知識・ゲーム・時事。"
+    categories:
+      - name: "文化・ゲーム"
+        repos:
+          - {name: game-making, memo: "ゲーム制作全般（技術面）"}
+          - {name: game-knowhow, memo: "ゲーム制作ノウハウ"}
+          - {name: godot, memo: "Godot"}
+          - {name: game-list, memo: "ゲーム一覧"}
+      - name: "知識・探究"
+        repos:
+          - {name: universe, memo: "宇宙"}
+          - {name: military, memo: "軍事・装備"}
+          - {name: exams, memo: "試験・学習メモ"}
+      - name: "時事・記録"
+        repos:
+          - {name: news, memo: "ニュースメモ"}
+          - {name: news-source, memo: "ニュース情報源"}
+          - {name: events, memo: "イベント"}
+
+  - name: "経営学"
+    description: "PM・組織・戦略。"
+    categories:
+      - flat: true
+        repos:
+          - {name: project-management, memo: "プロジェクト管理"}
+
+  - name: "環境・ツール"
+    description: "開発環境・ガジェット。"
+    categories:
+      - name: "開発環境"
+        repos:
+          - {name: nvim, memo: "Neovim"}
+          - {name: obsidian, memo: "Obsidian"}
+          - {name: toolchain, memo: "開発ツールチェーン"}
+      - name: "ハードウェア"
+        repos:
+          - {name: gadget, memo: "ガジェット"}
           - {name: custom-built-PC, memo: "自作PC"}
           - {name: custom-keyboard, memo: "自作キーボード"}
-          - {name: gadget, memo: "ガジェット"}
-          - {name: game-list, memo: "ゲーム一覧"}
+      - name: "デスク・操作"
+        repos:
+          - {name: unixporn, memo: "デスクトップカスタマイズ"}
+          - {name: setup, memo: "環境構築・セットアップ"}
+          - {name: shortcut, memo: "ショートカット"}
 
   - name: "管理"
-    description: "Org運用・未分類。"
+    description: "Org 運用・未分類。"
     categories:
-      - name: "管理"
+      - name: "Org"
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
       - name: "未分類"
-        repos:
-          - {name: english, memo: ''}
+        repos: []

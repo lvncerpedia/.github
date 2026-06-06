@@ -115,12 +115,13 @@ def render_category(category, org):
     repos = category["repos"] or []
     if not repos:
         return None
-    lines = [
-        f"### {category['name']}",
-        "",
+    lines = []
+    if not category.get("flat"):
+        lines.extend([f"### {category['name']}", ""])
+    lines.extend([
         "| Repository | Repository URL | Memo |",
         "| --- | --- | --- |",
-    ]
+    ])
     for repo in repos:
         name = repo["name"]
         memo = repo.get("memo") or ""
