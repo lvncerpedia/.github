@@ -12,6 +12,9 @@ permissions:
   contents: write
   pull-requests: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -31,13 +34,14 @@ jobs:
       - name: Create pull request
         uses: peter-evans/create-pull-request@v7
         with:
+          token: ${{ secrets.REPO_WRITE_TOKEN }}
           branch: chore/update-profile-readme
           title: "chore: update profile README"
           commit-message: "chore: update profile README"
           body: |
             Org の repo 一覧と `profile/repos.yaml` を同期しました。
 
-            - 新しい repo は `未分類` カテゴリに追加されています
+            - 新しい repo は `管理` → `未分類` に追加されています
             - 正しいカテゴリへ移動し、`memo` を記入してください
           add-paths: |
             profile/repos.yaml
