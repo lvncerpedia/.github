@@ -61,4 +61,4 @@ jobs:
             _このPRは GitHub Actions により自動作成されました。_
           add-paths: |
             profile/repos.yaml
-            profile/README.md
+            profile/CATEGORY.md
