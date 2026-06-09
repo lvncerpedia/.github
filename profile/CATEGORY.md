@@ -189,3 +189,10 @@ Org 運用・未分類。
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `.github` | [GitHub](https://github.com/lvncerpedia/.github) | Organizationプロフィール・同期スクリプト |
+
+### 未分類
+
+| Repository | Repository URL | Memo |
+| --- | --- | --- |
+| `javascript` | [GitHub](https://github.com/lvncerpedia/javascript) |  |
+| `python` | [GitHub](https://github.com/lvncerpedia/python) |  |

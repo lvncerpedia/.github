@@ -147,4 +147,6 @@ groups:
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
       - name: "未分類"
-        repos: []
+        repos:
+          - {name: javascript, memo: ''}
+          - {name: python, memo: ''}

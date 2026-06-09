@@ -61,7 +61,7 @@ def fetch_org_repos(org, token):
 
 def uncategorized_category(config):
     for category in iter_categories(config):
-        if category["name"] == UNCATEGORIZED:
+        if category.get("name") == UNCATEGORIZED:
             return category
 
     meta_group = None
