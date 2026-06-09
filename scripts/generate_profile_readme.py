@@ -158,41 +158,61 @@ def dump_yaml(config):
     return stream.getvalue()
 
 
+def write_github_output(changed, new_repos_added):
+    output_path = os.getenv("GITHUB_OUTPUT")
+    if not output_path:
+        return
+    with open(output_path, "a", encoding="utf-8") as handle:
+        handle.write(f"changed={'true' if changed else 'false'}\n")
+        handle.write(f"new_repos_added={'true' if new_repos_added else 'false'}\n")
+
+
 def main():
     check_only = "--check" in sys.argv
 
     config = load_config()
     org = config.get("org", "lvncerpedia")
+    new_repos = []
 
     token = os.getenv("GITHUB_TOKEN")
     if token:
         org_repos = fetch_org_repos(org, token)
         print(f"Fetched {len(org_repos)} repos from org '{org}'")
-        sync_with_org(config, org_repos)
+        new_repos = sync_with_org(config, org_repos)
     else:
         print("No GITHUB_TOKEN: skipping org sync, rendering from repos.yaml only")
 
+    new_repos_added = bool(new_repos)
     new_yaml = dump_yaml(config)
     new_category = build_category_md(render_tables(config, org))
 
     current_yaml = REPOS_YAML.read_text(encoding="utf-8")
     current_category = CATEGORY_MD.read_text(encoding="utf-8") if CATEGORY_MD.exists() else ""
-    changed = new_yaml != current_yaml or new_category != current_category
+    category_changed = new_category != current_category
+    yaml_changed_by_sync = new_repos_added and new_yaml != current_yaml
+    changed = category_changed or yaml_changed_by_sync
 
     if check_only:
         if changed:
             print("CHECK FAILED: repos.yaml or CATEGORY.md is out of date. Run the generator.")
+            write_github_output(changed, new_repos_added)
             sys.exit(1)
         print("CHECK OK: profile is up to date")
+        write_github_output(False, False)
         return
 
     if not changed:
         print("No changes")
+        write_github_output(False, False)
         return
 
-    REPOS_YAML.write_text(new_yaml, encoding="utf-8")
-    CATEGORY_MD.write_text(new_category, encoding="utf-8")
-    print("Updated repos.yaml and CATEGORY.md")
+    if new_repos_added:
+        REPOS_YAML.write_text(new_yaml, encoding="utf-8")
+    if category_changed:
+        CATEGORY_MD.write_text(new_category, encoding="utf-8")
+
+    write_github_output(changed, new_repos_added)
+    print("Updated repos.yaml and CATEGORY.md" if new_repos_added else "Updated CATEGORY.md")
 
 
 if __name__ == "__main__":

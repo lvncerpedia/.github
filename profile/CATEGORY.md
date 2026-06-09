@@ -37,6 +37,8 @@
 | --- | --- | --- |
 | `programming` | [GitHub](https://github.com/lvncerpedia/programming) | プログラミング全般 |
 | `programming-lang` | [GitHub](https://github.com/lvncerpedia/programming-lang) | プログラミング言語全般 |
+| `javascript` | [GitHub](https://github.com/lvncerpedia/javascript) | JavaScript |
+| `python` | [GitHub](https://github.com/lvncerpedia/python) | Python |
 | `go` | [GitHub](https://github.com/lvncerpedia/go) | Go |
 | `rust` | [GitHub](https://github.com/lvncerpedia/rust) | Rust |
 | `java` | [GitHub](https://github.com/lvncerpedia/java) | Java |
@@ -189,10 +191,3 @@ Org 運用・未分類。
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `.github` | [GitHub](https://github.com/lvncerpedia/.github) | Organizationプロフィール・同期スクリプト |
-
-### 未分類
-
-| Repository | Repository URL | Memo |
-| --- | --- | --- |
-| `javascript` | [GitHub](https://github.com/lvncerpedia/javascript) |  |
-| `python` | [GitHub](https://github.com/lvncerpedia/python) |  |
