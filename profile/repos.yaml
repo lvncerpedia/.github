@@ -30,6 +30,8 @@ groups:
         repos:
           - {name: programming, memo: "プログラミング全般"}
           - {name: programming-lang, memo: "プログラミング言語全般"}
+          - {name: javascript, memo: 'JavaScript'}
+          - {name: python, memo: 'Python'}
           - {name: go, memo: "Go"}
           - {name: rust, memo: "Rust"}
           - {name: java, memo: "Java"}
@@ -146,7 +148,3 @@ groups:
       - name: "Org"
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
-      - name: "未分類"
-        repos:
-          - {name: javascript, memo: ''}
-          - {name: python, memo: ''}
