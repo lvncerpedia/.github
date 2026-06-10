@@ -122,6 +122,7 @@ groups:
       - flat: true
         repos:
           - {name: project-management, memo: "プロジェクト管理"}
+          - {name: organizational-behavior, memo: '組織行動学'}
 
   - name: "環境・ツール"
     description: "開発環境・ガジェット。"
@@ -148,6 +149,3 @@ groups:
       - name: "Org"
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
-      - name: 未分類
-        repos:
-          - {name: organizational-behavior, memo: ''}
