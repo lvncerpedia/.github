@@ -153,6 +153,7 @@ PM・組織・戦略。
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `project-management` | [GitHub](https://github.com/lvncerpedia/project-management) | プロジェクト管理 |
+| `organizational-behavior` | [GitHub](https://github.com/lvncerpedia/organizational-behavior) | 組織行動学 |
 
 ## 環境・ツール
 
@@ -191,9 +192,3 @@ Org 運用・未分類。
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `.github` | [GitHub](https://github.com/lvncerpedia/.github) | Organizationプロフィール・同期スクリプト |
-
-### 未分類
-
-| Repository | Repository URL | Memo |
-| --- | --- | --- |
-| `organizational-behavior` | [GitHub](https://github.com/lvncerpedia/organizational-behavior) |  |
