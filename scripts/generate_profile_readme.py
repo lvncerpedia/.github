@@ -170,13 +170,21 @@ def format_pr_title_suffix(new_repos):
     return f"{new_repos[0]} +{len(new_repos) - 1} more"
 
 
-def write_github_output(changed, new_repos_added, new_repos, org):
+def uncategorized_repo_names(config):
+    for category in iter_categories(config):
+        if category.get("name") == UNCATEGORIZED:
+            return [str(repo["name"]) for repo in category["repos"] or []]
+    return []
+
+
+def write_github_output(changed, new_repos_added, new_repos, org, uncategorized_empty):
     output_path = os.getenv("GITHUB_OUTPUT")
     if not output_path:
         return
     with open(output_path, "a", encoding="utf-8") as handle:
         handle.write(f"changed={'true' if changed else 'false'}\n")
         handle.write(f"new_repos_added={'true' if new_repos_added else 'false'}\n")
+        handle.write(f"uncategorized_empty={'true' if uncategorized_empty else 'false'}\n")
         if new_repos:
             handle.write(f"pr_title_suffix={format_pr_title_suffix(new_repos)}\n")
             handle.write("new_repos_body<<EOF\n")
@@ -200,6 +208,7 @@ def main():
         print("No GITHUB_TOKEN: skipping org sync, rendering from repos.yaml only")
 
     new_repos_added = bool(new_repos)
+    uncategorized_empty = not uncategorized_repo_names(config)
     new_yaml = dump_yaml(config)
     new_category = build_category_md(render_tables(config, org))
 
@@ -212,15 +221,15 @@ def main():
     if check_only:
         if changed:
             print("CHECK FAILED: repos.yaml or CATEGORY.md is out of date. Run the generator.")
-            write_github_output(changed, new_repos_added, new_repos, org)
+            write_github_output(changed, new_repos_added, new_repos, org, uncategorized_empty)
             sys.exit(1)
         print("CHECK OK: profile is up to date")
-        write_github_output(False, False, [], org)
+        write_github_output(False, False, [], org, uncategorized_empty)
         return
 
     if not changed:
         print("No changes")
-        write_github_output(False, False, [], org)
+        write_github_output(False, False, [], org, uncategorized_empty)
         return
 
     if new_repos_added:
@@ -228,7 +237,7 @@ def main():
     if category_changed:
         CATEGORY_MD.write_text(new_category, encoding="utf-8")
 
-    write_github_output(changed, new_repos_added, new_repos, org)
+    write_github_output(changed, new_repos_added, new_repos, org, uncategorized_empty)
     print("Updated repos.yaml and CATEGORY.md" if new_repos_added else "Updated CATEGORY.md")
 
 
