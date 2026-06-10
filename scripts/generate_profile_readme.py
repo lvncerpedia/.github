@@ -158,13 +158,30 @@ def dump_yaml(config):
     return stream.getvalue()
 
 
-def write_github_output(changed, new_repos_added):
+def format_new_repos_for_pr(new_repos, org):
+    return "\n".join(
+        f"- [`{name}`](https://github.com/{org}/{name})" for name in new_repos
+    )
+
+
+def format_pr_title_suffix(new_repos):
+    if len(new_repos) <= 3:
+        return ", ".join(new_repos)
+    return f"{new_repos[0]} +{len(new_repos) - 1} more"
+
+
+def write_github_output(changed, new_repos_added, new_repos, org):
     output_path = os.getenv("GITHUB_OUTPUT")
     if not output_path:
         return
     with open(output_path, "a", encoding="utf-8") as handle:
         handle.write(f"changed={'true' if changed else 'false'}\n")
         handle.write(f"new_repos_added={'true' if new_repos_added else 'false'}\n")
+        if new_repos:
+            handle.write(f"pr_title_suffix={format_pr_title_suffix(new_repos)}\n")
+            handle.write("new_repos_body<<EOF\n")
+            handle.write(format_new_repos_for_pr(new_repos, org))
+            handle.write("\nEOF\n")
 
 
 def main():
@@ -195,15 +212,15 @@ def main():
     if check_only:
         if changed:
             print("CHECK FAILED: repos.yaml or CATEGORY.md is out of date. Run the generator.")
-            write_github_output(changed, new_repos_added)
+            write_github_output(changed, new_repos_added, new_repos, org)
             sys.exit(1)
         print("CHECK OK: profile is up to date")
-        write_github_output(False, False)
+        write_github_output(False, False, [], org)
         return
 
     if not changed:
         print("No changes")
-        write_github_output(False, False)
+        write_github_output(False, False, [], org)
         return
 
     if new_repos_added:
@@ -211,7 +228,7 @@ def main():
     if category_changed:
         CATEGORY_MD.write_text(new_category, encoding="utf-8")
 
-    write_github_output(changed, new_repos_added)
+    write_github_output(changed, new_repos_added, new_repos, org)
     print("Updated repos.yaml and CATEGORY.md" if new_repos_added else "Updated CATEGORY.md")
 
 

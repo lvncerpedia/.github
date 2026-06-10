@@ -49,16 +49,21 @@ jobs:
         with:
           token: ${{ secrets.REPO_WRITE_TOKEN }}
           branch: chore/sync-org-repos
-          title: "chore: sync org repos to profile"
-          commit-message: "chore: sync org repos to profile"
+          delete-branch: true
+          title: "chore: add ${{ steps.generate.outputs.pr_title_suffix }} to 未分類"
+          commit-message: "chore: add ${{ steps.generate.outputs.pr_title_suffix }} to 未分類"
           body: |
             ## Org リポジトリの同期
 
-            GitHub API で検出した新しいリポジトリを `profile/repos.yaml` の `未分類` に追加しました。
+            GitHub API で検出した新しいリポジトリを `profile/repos.yaml` の `管理` → `未分類` に追加しました。
+
+            ### 追加されたリポジトリ
+
+            ${{ steps.generate.outputs.new_repos_body }}
 
             ### 対応してください
 
-            - [ ] `未分類` の各 repo を正しいカテゴリへ移動する
+            - [ ] 上記 repo を正しいカテゴリへ移動する
             - [ ] `memo` フィールドに説明を記入する
             - [ ] 問題なければこの PR をマージする
 

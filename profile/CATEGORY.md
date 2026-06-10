@@ -191,3 +191,9 @@ Org 運用・未分類。
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `.github` | [GitHub](https://github.com/lvncerpedia/.github) | Organizationプロフィール・同期スクリプト |
+
+### 未分類
+
+| Repository | Repository URL | Memo |
+| --- | --- | --- |
+| `organizational-behavior` | [GitHub](https://github.com/lvncerpedia/organizational-behavior) |  |

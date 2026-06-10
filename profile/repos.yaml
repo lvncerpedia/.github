@@ -148,3 +148,6 @@ groups:
       - name: "Org"
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
+      - name: 未分類
+        repos:
+          - {name: organizational-behavior, memo: ''}
