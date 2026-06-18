@@ -29,7 +29,7 @@ jobs:
         id: generate
         working-directory: scripts
         env:
-          GITHUB_TOKEN: ${{ secrets.ORG_READ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_WRITE_TOKEN }}
         run: |
           uv sync
           uv run generate_profile_readme.py
