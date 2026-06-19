@@ -65,7 +65,7 @@ jobs:
 
             - [ ] 上記 repo を正しいカテゴリへ移動する
             - [ ] `memo` フィールドに説明を記入する
-            - [ ] 問題なければこの PR をマージする
+            - [ ] 未分類が空になると、この PR は自動マージされます
 
             ---
             _このPRは GitHub Actions により自動作成されました。_
@@ -73,15 +73,16 @@ jobs:
             profile/repos.yaml
             profile/CATEGORY.md
 
-      - name: Close sync PR when 未分類 is empty
+      - name: Merge sync PR when 未分類 is empty
         if: steps.generate.outputs.uncategorized_empty == 'true'
         env:
           GH_TOKEN: ${{ secrets.REPO_WRITE_TOKEN }}
         run: |
           pr_number=$(gh pr list --head chore/sync-org-repos --state open --json number --jq '.[0].number // empty')
           if [ -z "$pr_number" ]; then
-            echo "No open sync PR to close"
+            echo "No open sync PR to merge"
             exit 0
           fi
-          gh pr close "$pr_number" --delete-branch \
-            --comment "未分類が空になったため、この PR を自動クローズしました。"
+          gh pr merge "$pr_number" --squash --delete-branch \
+            --subject "chore: sync org repos" \
+            --body "未分類が空になったため、この PR を自動マージしました。"
