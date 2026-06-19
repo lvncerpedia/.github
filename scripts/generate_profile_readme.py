@@ -159,6 +159,11 @@ def render_overview_table(config):
     ])
 
 
+def render_group_header(name):
+    anchor = heading_anchor(name)
+    return f'<a id="{anchor}"></a>\n\n## {name}'
+
+
 def render_tables(config, org):
     blocks = []
     for group in config["groups"]:
@@ -169,8 +174,7 @@ def render_tables(config, org):
         ]
         if not category_blocks:
             continue
-        anchor = heading_anchor(group["name"])
-        header = f"## {group['name']} {{#{anchor}}}"
+        header = render_group_header(group["name"])
         blocks.append("\n\n".join([header, *category_blocks]))
     return "\n\n".join(blocks)
 

@@ -15,21 +15,27 @@
 | [環境・ツール](#環境・ツール) | 開発環境・ガジェット。 |
 | [管理](#管理) | Org 運用・未分類。 |
 
-## 理学 {#理学}
+<a id="理学"></a>
+
+## 理学
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `math` | [GitHub](https://github.com/lvncerpedia/math) | 数学 |
 | `algorithm-and-data-structure` | [GitHub](https://github.com/lvncerpedia/algorithm-and-data-structure) | アルゴリズム・データ構造 |
 
-## コンピュータ科学 {#コンピュータ科学}
+<a id="コンピュータ科学"></a>
+
+## コンピュータ科学
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `computer-science` | [GitHub](https://github.com/lvncerpedia/computer-science) | コンピュータサイエンス |
 | `os` | [GitHub](https://github.com/lvncerpedia/os) | オペレーティングシステム |
 
-## ソフトウェア工学 {#ソフトウェア工学}
+<a id="ソフトウェア工学"></a>
+
+## ソフトウェア工学
 
 ### 設計
 
@@ -82,7 +88,9 @@
 | `deploy` | [GitHub](https://github.com/lvncerpedia/deploy) | デプロイ |
 | `workflows` | [GitHub](https://github.com/lvncerpedia/workflows) | ワークフロー自動化 |
 
-## 情報・知能 {#情報・知能}
+<a id="情報・知能"></a>
+
+## 情報・知能
 
 ### AI・LLM
 
@@ -105,7 +113,9 @@
 | `sql` | [GitHub](https://github.com/lvncerpedia/sql) | SQL |
 | `orm` | [GitHub](https://github.com/lvncerpedia/orm) | ORM |
 
-## デザイン {#デザイン}
+<a id="デザイン"></a>
+
+## デザイン
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
@@ -117,13 +127,17 @@
 | `presentation` | [GitHub](https://github.com/lvncerpedia/presentation) | プレゼンテーション |
 | `modeling` | [GitHub](https://github.com/lvncerpedia/modeling) | 3D モデリング |
 
-## 人文・言語 {#人文・言語}
+<a id="人文・言語"></a>
+
+## 人文・言語
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `english` | [GitHub](https://github.com/lvncerpedia/english) | 英語 |
 
-## 教養・文化 {#教養・文化}
+<a id="教養・文化"></a>
+
+## 教養・文化
 
 ### 文化・ゲーム
 
@@ -150,7 +164,9 @@
 | `news-source` | [GitHub](https://github.com/lvncerpedia/news-source) | ニュース情報源 |
 | `events` | [GitHub](https://github.com/lvncerpedia/events) | イベント |
 
-## 経営学 {#経営学}
+<a id="経営学"></a>
+
+## 経営学
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
@@ -158,7 +174,9 @@
 | `logical-thinking` | [GitHub](https://github.com/lvncerpedia/logical-thinking) | 論理的思考 |
 | `organizational-behavior` | [GitHub](https://github.com/lvncerpedia/organizational-behavior) | 組織行動学 |
 
-## 環境・ツール {#環境・ツール}
+<a id="環境・ツール"></a>
+
+## 環境・ツール
 
 ### 開発環境
 
@@ -184,7 +202,9 @@
 | `setup` | [GitHub](https://github.com/lvncerpedia/setup) | 環境構築・セットアップ |
 | `shortcut` | [GitHub](https://github.com/lvncerpedia/shortcut) | ショートカット |
 
-## 管理 {#管理}
+<a id="管理"></a>
+
+## 管理
 
 ### Org
 
