@@ -44,6 +44,7 @@ groups:
           - {name: tailwindcss, memo: "Tailwind CSS"}
       - name: "品質"
         repos:
+          - {name: usertest, memo: 'ユーザーテスト'}
           - {name: software-test, memo: "ソフトウェアテスト"}
           - {name: debug, memo: "デバッグ"}
       - name: "運用"
@@ -54,7 +55,9 @@ groups:
           - {name: iac, memo: "Infrastructure as Code"}
           - {name: network, memo: "ネットワーク"}
           - {name: monitoring, memo: "監視"}
+          - {name: version-control, memo: "バージョン管理"}
           - {name: git, memo: "Git"}
+          - {name: deploy, memo: "デプロイ"}
           - {name: workflows, memo: "ワークフロー自動化"}
 
   - name: "情報・知能"
@@ -122,7 +125,8 @@ groups:
       - flat: true
         repos:
           - {name: project-management, memo: "プロジェクト管理"}
-          - {name: organizational-behavior, memo: '組織行動学'}
+          - {name: logical-thinking, memo: "論理的思考"}
+          - {name: organizational-behavior, memo: "組織行動学"}
 
   - name: "環境・ツール"
     description: "開発環境・ガジェット。"
@@ -149,3 +153,5 @@ groups:
       - name: "Org"
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
+      - name: 未分類
+        repos:

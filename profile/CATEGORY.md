@@ -63,6 +63,7 @@
 
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
+| `usertest` | [GitHub](https://github.com/lvncerpedia/usertest) | ユーザーテスト |
 | `software-test` | [GitHub](https://github.com/lvncerpedia/software-test) | ソフトウェアテスト |
 | `debug` | [GitHub](https://github.com/lvncerpedia/debug) | デバッグ |
 
@@ -76,7 +77,9 @@
 | `iac` | [GitHub](https://github.com/lvncerpedia/iac) | Infrastructure as Code |
 | `network` | [GitHub](https://github.com/lvncerpedia/network) | ネットワーク |
 | `monitoring` | [GitHub](https://github.com/lvncerpedia/monitoring) | 監視 |
+| `version-control` | [GitHub](https://github.com/lvncerpedia/version-control) | バージョン管理 |
 | `git` | [GitHub](https://github.com/lvncerpedia/git) | Git |
+| `deploy` | [GitHub](https://github.com/lvncerpedia/deploy) | デプロイ |
 | `workflows` | [GitHub](https://github.com/lvncerpedia/workflows) | ワークフロー自動化 |
 
 ## 情報・知能 {#情報・知能}
@@ -152,6 +155,7 @@
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `project-management` | [GitHub](https://github.com/lvncerpedia/project-management) | プロジェクト管理 |
+| `logical-thinking` | [GitHub](https://github.com/lvncerpedia/logical-thinking) | 論理的思考 |
 | `organizational-behavior` | [GitHub](https://github.com/lvncerpedia/organizational-behavior) | 組織行動学 |
 
 ## 環境・ツール {#環境・ツール}
