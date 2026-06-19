@@ -109,6 +109,17 @@ def sync_with_org(config, org_repos):
     return new_repos
 
 
+def group_has_repos(group):
+    for category in group["categories"]:
+        if category["repos"]:
+            return True
+    return False
+
+
+def heading_anchor(name):
+    return name
+
+
 def render_category(category, org):
     repos = category["repos"] or []
     if not repos:
@@ -128,6 +139,26 @@ def render_category(category, org):
     return "\n".join(lines)
 
 
+def render_overview_table(config):
+    rows = []
+    for group in config["groups"]:
+        if not group_has_repos(group):
+            continue
+        name = group["name"]
+        anchor = heading_anchor(name)
+        description = group.get("description") or ""
+        rows.append(f"| [{name}](#{anchor}) | {description} |")
+    if not rows:
+        return ""
+    return "\n".join([
+        "## カテゴリ一覧",
+        "",
+        "| カテゴリ | 説明 |",
+        "| --- | --- |",
+        *rows,
+    ])
+
+
 def render_tables(config, org):
     blocks = []
     for group in config["groups"]:
@@ -138,16 +169,15 @@ def render_tables(config, org):
         ]
         if not category_blocks:
             continue
-        header = f"## {group['name']}"
-        description = group.get("description")
-        if description:
-            header = f"{header}\n\n{description}"
+        anchor = heading_anchor(group["name"])
+        header = f"## {group['name']} {{#{anchor}}}"
         blocks.append("\n\n".join([header, *category_blocks]))
     return "\n\n".join(blocks)
 
 
-def build_category_md(generated):
-    return f"{CATEGORY_HEADER}\n\n{generated}\n"
+def build_category_md(overview, body):
+    sections = [section for section in (overview, body) if section]
+    return f"{CATEGORY_HEADER}\n\n" + "\n\n".join(sections) + "\n"
 
 
 def dump_yaml(config):
@@ -210,7 +240,9 @@ def main():
     new_repos_added = bool(new_repos)
     uncategorized_empty = not uncategorized_repo_names(config)
     new_yaml = dump_yaml(config)
-    new_category = build_category_md(render_tables(config, org))
+    overview = render_overview_table(config)
+    body = render_tables(config, org)
+    new_category = build_category_md(overview, body)
 
     current_yaml = REPOS_YAML.read_text(encoding="utf-8")
     current_category = CATEGORY_MD.read_text(encoding="utf-8") if CATEGORY_MD.exists() else ""
