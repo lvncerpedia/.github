@@ -42,6 +42,7 @@
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `architecture` | [GitHub](https://github.com/lvncerpedia/architecture) | ソフトウェアアーキテクチャ |
+| `api` | [GitHub](https://github.com/lvncerpedia/api) | API |
 | `development-principles` | [GitHub](https://github.com/lvncerpedia/development-principles) | 開発原則 |
 | `uml` | [GitHub](https://github.com/lvncerpedia/uml) | UML |
 | `mermaid` | [GitHub](https://github.com/lvncerpedia/mermaid) | Mermaid図 |
@@ -171,6 +172,7 @@
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `project-management` | [GitHub](https://github.com/lvncerpedia/project-management) | プロジェクト管理 |
+| `corporate-strategy` | [GitHub](https://github.com/lvncerpedia/corporate-strategy) | 経営戦略 |
 | `logical-thinking` | [GitHub](https://github.com/lvncerpedia/logical-thinking) | 論理的思考 |
 | `organizational-behavior` | [GitHub](https://github.com/lvncerpedia/organizational-behavior) | 組織行動学 |
 

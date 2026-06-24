@@ -23,6 +23,7 @@ groups:
       - name: "設計"
         repos:
           - {name: architecture, memo: "ソフトウェアアーキテクチャ"}
+          - {name: api, memo: 'API'}
           - {name: development-principles, memo: "開発原則"}
           - {name: uml, memo: "UML"}
           - {name: mermaid, memo: "Mermaid図"}
@@ -125,6 +126,7 @@ groups:
       - flat: true
         repos:
           - {name: project-management, memo: "プロジェクト管理"}
+          - {name: corporate-strategy, memo: '経営戦略'}
           - {name: logical-thinking, memo: "論理的思考"}
           - {name: organizational-behavior, memo: "組織行動学"}
 
@@ -153,5 +155,3 @@ groups:
       - name: "Org"
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
-      - name: 未分類
-        repos: []
