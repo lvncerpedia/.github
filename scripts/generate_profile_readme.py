@@ -59,9 +59,15 @@ def fetch_org_repos(org, token):
     return repos
 
 
+def ensure_repos_list(category):
+    if category.get("repos") is None:
+        category["repos"] = []
+
+
 def uncategorized_category(config):
     for category in iter_categories(config):
         if category.get("name") == UNCATEGORIZED:
+            ensure_repos_list(category)
             return category
 
     meta_group = None
@@ -83,6 +89,7 @@ def uncategorized_category(config):
 
 
 def add_repo(category, name):
+    ensure_repos_list(category)
     entry = CommentedMap()
     entry["name"] = name
     entry["memo"] = ""
