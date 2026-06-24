@@ -211,3 +211,10 @@
 | Repository | Repository URL | Memo |
 | --- | --- | --- |
 | `.github` | [GitHub](https://github.com/lvncerpedia/.github) | Organizationプロフィール・同期スクリプト |
+
+### 未分類
+
+| Repository | Repository URL | Memo |
+| --- | --- | --- |
+| `api` | [GitHub](https://github.com/lvncerpedia/api) |  |
+| `corporate-strategy` | [GitHub](https://github.com/lvncerpedia/corporate-strategy) |  |

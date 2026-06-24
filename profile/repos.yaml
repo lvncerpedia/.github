@@ -154,4 +154,6 @@ groups:
         repos:
           - {name: .github, memo: "Organizationプロフィール・同期スクリプト"}
       - name: 未分類
-        repos: []
+        repos:
+          - {name: api, memo: ''}
+          - {name: corporate-strategy, memo: ''}
