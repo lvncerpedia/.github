@@ -15,7 +15,7 @@
 
 ## カテゴリとリポジトリ一覧
 
-カテゴリーとリポジトリの一覧は [CATEGORY.md](./CATEGORY.md) を参照。
+カテゴリーとリポジトリの一覧は [CATEGORY.md](https://github.com/lvncerpedia/portal/blob/main/CATEGORY.md) を参照。
 
 ## カテゴリの考え方
 
